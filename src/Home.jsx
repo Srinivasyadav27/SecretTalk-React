@@ -45,9 +45,7 @@ function Home() {
         setDecForm(true);
       };
 
-      function toComment(event){
-        setComment(event.target.value)
-      }
+     
   return (
     <>
       <div className="outer" >
@@ -76,7 +74,9 @@ function Home() {
                   <input type="password" id="password"
                   value={password}
                   onChange={(event)=>{setPassword(event.target.value)}}/>
-                  <textarea value={comment} onChange={toComment} placeholder='Hint'/>
+                  <textarea value={comment} onChange={(event)=>{
+                    setComment(event.target.value)
+                  }} placeholder='Hint'/>
                   
                   <button onClick={encryptMsg}>Encrypt</button>
               </div>
